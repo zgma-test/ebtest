@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "EBTest.js",
         "cursor": {
-          "lineNumber": 2,
-          "column": 5
+          "lineNumber": 3,
+          "column": 24
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -21,52 +21,14 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "cweCustomEventRule",
-            "config": {}
-          }
-        ]
+        "triggers": []
       }
     },
     "openFiles": [
       "9e1175d1-4284-434c-abdd-ad638260d545"
     ],
     "currentFileId": "9e1175d1-4284-434c-abdd-ad638260d545",
-    "resources": {
-      "cweCustomEventRule": {
-        "name": "cweCustomEventRule",
-        "type": "CLOUD_WATCH",
-        "config": {
-          "mode": 0,
-          "name": "CustomEventRule",
-          "description": "",
-          "eventPattern": {
-            "source": [
-              "aws.s3"
-            ],
-            "detail-type": [
-              "AWS API Call via CloudTrail"
-            ],
-            "detail": {
-              "eventSource": [
-                "s3.amazonaws.com"
-              ],
-              "eventName": [
-                "PutObject",
-                "DeleteObject"
-              ],
-              "requestParameters": {
-                "bucketName": [
-                  "udith.sigma.test"
-                ]
-              }
-            }
-          },
-          "patternType": 1
-        }
-      }
-    },
+    "resources": {},
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -93,7 +55,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1584594618732
+    "lastSave": 1584595525685
   },
   "VCS_STATE": {
     "provider": "GitHub",
