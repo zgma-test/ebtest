@@ -1,0 +1,105 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "9e1175d1-4284-434c-abdd-ad638260d545": {
+        "id": "9e1175d1-4284-434c-abdd-ad638260d545",
+        "parent": null,
+        "name": "EBTest.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "EBTest.js",
+        "cursor": {
+          "lineNumber": 2,
+          "column": 5
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "cweCustomEventRule",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "openFiles": [
+      "9e1175d1-4284-434c-abdd-ad638260d545"
+    ],
+    "currentFileId": "9e1175d1-4284-434c-abdd-ad638260d545",
+    "resources": {
+      "cweCustomEventRule": {
+        "name": "cweCustomEventRule",
+        "type": "CLOUD_WATCH",
+        "config": {
+          "mode": 0,
+          "name": "CustomEventRule",
+          "description": "",
+          "eventPattern": {
+            "source": [
+              "aws.s3"
+            ],
+            "detail-type": [
+              "AWS API Call via CloudTrail"
+            ],
+            "detail": {
+              "eventSource": [
+                "s3.amazonaws.com"
+              ],
+              "eventName": [
+                "PutObject",
+                "DeleteObject"
+              ],
+              "requestParameters": {
+                "bucketName": [
+                  "udith.sigma.test"
+                ]
+              }
+            }
+          },
+          "patternType": 1
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "EBTest",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1584594618732
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "ebtest",
+      "url": "https://github.com/zgma-test/ebtest"
+    }
+  }
+}
